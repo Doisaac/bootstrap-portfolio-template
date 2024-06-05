@@ -11,6 +11,16 @@ h1 {
   font-family: "Rubik Dirt", system-ui;
 }
 
+.section-title {
+  font-size: 2rem;
+  padding: 15px 0;
+  font-family: "Rubik Dirt", system-ui;
+}
+
+.section-text {
+  font-size: 1.2rem;
+}
+
 /* NAVBAR */
 .navbar {
   padding: 2rem; 
@@ -39,6 +49,22 @@ h1 {
   & h2 {
     font-size: 1.5rem;
     color: #615151;
+  }
+}
+
+/* ABOUT ME */
+.dark-section {
+  color: #fff;
+  background-color: #1b1b32;
+}
+
+.about-me {
+  height: 500px;
+  padding: 10px;
+
+  & .contenedor {
+    max-width: 600px;
+    text-align: center;
   }
 }
 
