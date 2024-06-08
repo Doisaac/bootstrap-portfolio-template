@@ -21,6 +21,19 @@ h1 {
   font-size: 1.2rem;
 }
 
+.description-section {
+  font-size: 1.2rem;
+  color: #584e4e;
+}
+
+.black-text {
+  color: #000;
+}
+
+.white-text {
+  color: #fff;
+}
+
 /* NAVBAR */
 .navbar {
   padding: 2rem; 
@@ -118,11 +131,86 @@ h1 {
   }
 }
 
+/* PROJECTS */
+.recently-projects {
+  padding: 40px;
+
+  & img {
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    display: block;
+    transition: all 0.2s ease;
+  }
+
+  & .project-container {
+    padding-top: 60px;
+    margin-bottom: 40px;
+  }
+
+  & .overlay {
+    transition: all 0.2s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+    & p {
+      font-size: 25px;
+      font-weight: bold;
+      margin-bottom: 0;
+    }
+
+    & .icons-container {
+      display: flex;
+      & i {
+        color: #000;
+        margin: 10px;
+        font-size: 60px;
+      }
+    }
+  }
+
+  & .project {
+    position: relative;
+
+    &:hover {
+      .overlay {
+        opacity: 1;
+      }
+
+      img {
+        opacity: 0.2;
+      }
+    }
+  }
+}
+
 
 @media screen and (min-width: 700px) {
   .hero-body {
     & img {
       max-width: 600px;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .recently-projects {
+    & .project {
+
+      & .overlay {
+        & p {
+          font-size: 18px;
+        }
+
+        & i {
+          font-size: 40px;
+        }
+      }
     }
   }
 }
